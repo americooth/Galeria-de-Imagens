@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagens</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        .galeria img {
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            transition: border 0.3s;
+        }
+        .galeria img:hover {
+            border: 2px solid #000;
+        }
+        .imagem-destaque {
+            margin-top: 20px;
+        }
+        .imagem-destaque img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeria de Imagens</h1>
+    
+    <!-- Área das miniaturas -->
+    <div class="galeria">
+        <img src="neymar.jpg" alt="Imagem 1" data-full="neymar.jpg">
+        <img src="neymar2.jpg" alt="Imagem 2" data-full="neymar2.jpg">
+        <img src="neymar3.jpg" alt="Imagem 3" data-full="neymar3.jpg">
+        <img src="neymar4.jpg" alt="Imagem 4" data-full="neymar4.jpg">
+        <img src="neymar5.jpg" alt="Imagem 5" data-full="neymar5.jpg">
+    </div>
+
+    <!-- Área da imagem em destaque -->
+    <div class="imagem-destaque">
+        <img src="imagem1.jpg" alt="Imagem em destaque" id="imagemEmDestaque">
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
